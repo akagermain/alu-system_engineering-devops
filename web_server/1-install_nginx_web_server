@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# Install Nginx and configure a default website on port 80.
+
+set -e
+
+apt-get update
+apt-get install -y nginx
+
+mkdir -p /var/www/html
+printf 'Holberton School for the win!\n' > /var/www/html/index.html
+
+cat > /etc/nginx/sites-available/default <<'EOF'
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    root /var/www/html;
+    index index.html;
+    server_name _;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
+EOF
+
+ln -sfn /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+
+nginx -t
+service nginx restart
