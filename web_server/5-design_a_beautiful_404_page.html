@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A small detour on agermain.tech. Find your way back to the homepage.">
+  <title>404 — A small detour | agermain.tech</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f6f4ec;
+      --ink: #252b23;
+      --muted: #62675c;
+      --accent: #b34724;
+      --line: #d7dacb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Segoe UI", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 6px; }
+    .page { max-width: 1440px; min-height: 100vh; min-height: 100svh; margin: auto; padding: 0 6%; display: flex; flex-direction: column; }
+    header { min-height: 104px; display: flex; align-items: center; justify-content: space-between; gap: 20px; border-bottom: 1px solid var(--line); }
+    .brand { display: inline-flex; align-items: center; gap: 13px; text-decoration: none; font-size: 16px; font-weight: 600; letter-spacing: -.3px; }
+    .monogram { display: grid; place-items: center; width: 37px; height: 37px; background: var(--ink); color: var(--paper); border-radius: 50%; font-size: 13px; letter-spacing: -1px; }
+    .header-note, .eyebrow, .coordinates, footer { font-family: "Courier New", monospace; }
+    .header-note { font-size: 11px; letter-spacing: 1.7px; text-transform: uppercase; }
+    .header-note::before { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); margin-right: 10px; }
+    main { flex: 1; padding: 68px 0 74px; display: grid; grid-template-columns: 1.04fr 1fr; gap: 5%; align-items: center; }
+    .eyebrow { color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.7px; text-transform: uppercase; margin: 0 0 15px; }
+    .error-number { font-size: clamp(104px, 12.6vw, 172px); font-weight: 750; letter-spacing: -.09em; line-height: .96; margin: 0 0 29px -8px; }
+    .error-number span { color: var(--accent); }
+    h1 { font-size: clamp(36px, 4.05vw, 55px); line-height: 1.06; letter-spacing: -.055em; font-weight: 600; margin: 0 0 25px; }
+    h1 span { display: block; }
+    .french { font-size: 16px; line-height: 1.6; margin: 0 0 7px; font-weight: 600; }
+    .description { color: var(--muted); max-width: 355px; font-size: 15px; line-height: 1.75; margin: 0 0 30px; }
+    .home-link { display: inline-flex; align-items: center; justify-content: center; gap: 27px; background: var(--ink); color: #fff; text-decoration: none; padding: 17px 23px; border-radius: 7px; font-size: 14px; font-weight: 600; transition: background .18s, transform .18s; }
+    .home-link:hover { background: var(--accent); transform: translateY(-2px); }
+    .home-link svg { width: 17px; height: 17px; }
+    .art { position: relative; margin: 0; }
+    .map-art { width: 100%; height: auto; display: block; }
+    .coordinates { color: var(--muted); text-align: center; font-size: 10px; letter-spacing: 1.4px; margin-top: 14px; }
+    .compass { transform-origin: 455px 84px; animation: compass-sway 8s ease-in-out infinite; }
+    @keyframes compass-sway { 0%, 100% { transform: rotate(-6deg); } 50% { transform: rotate(7deg); } }
+    footer { display: flex; justify-content: space-between; align-items: center; gap: 18px; border-top: 1px solid var(--line); min-height: 76px; color: var(--muted); font-size: 10px; line-height: 1.6; letter-spacing: 1.1px; text-transform: uppercase; }
+    .footer-right { display: flex; align-items: center; gap: 12px; }
+    .footer-line { width: 30px; height: 1px; background: var(--accent); }
+    @media (min-width: 1441px) { .page { padding-inline: 86px; } }
+    @media (max-width: 760px) {
+      .page { padding: 0 7%; }
+      header { min-height: 80px; }
+      .header-note { font-size: 9px; letter-spacing: 1px; }
+      main { grid-template-columns: 1fr; gap: 38px; padding: 45px 0; }
+      .error-number { font-size: 116px; margin-left: -5px; margin-bottom: 22px; }
+      h1 { font-size: clamp(36px, 8vw, 49px); }
+      .description { max-width: 430px; }
+      .art { width: 100%; max-width: 450px; margin: 0 auto; }
+      footer { padding: 20px 0; min-height: 76px; font-size: 9px; }
+    }
+    @media (max-width: 360px) { .header-note { display: none; } .footer-line { display: none; } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <a class="brand" href="/" aria-label="agermain.tech homepage"><span class="monogram" aria-hidden="true">ag.</span>agermain.tech</a>
+      <span class="header-note">A small detour</span>
+    </header>
+    <main>
+      <section aria-labelledby="page-title">
+        <p class="eyebrow">Error / Page not found</p>
+        <p class="error-number" aria-label="Error 404">4<span>0</span>4</p>
+        <h1 id="page-title">Wrong turn.<span>Good view.</span></h1>
+        <p class="french" lang="fr">Ceci n'est pas une page</p>
+        <p class="description">Looks like this path wandered off the map. Let's take you somewhere familiar.</p>
+        <a class="home-link" href="/">Back to homepage<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </section>
+      <figure class="art">
+        <svg class="map-art" viewBox="0 0 560 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="map-title map-description">
+          <title id="map-title">A small detour on a folded map</title>
+          <desc id="map-description">A winding orange trail crosses a folded green map, connecting a lost location pin to a little house.</desc>
+          <defs>
+            <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" stroke="#d5d9ca" stroke-width=".8"/></pattern>
+            <clipPath id="map-shape"><path d="m54 173 145-43 145 36 145-43-23 253-143 43-145-36-145 43z"/></clipPath>
+            <filter id="paper-shadow" x="0" y="60" width="560" height="440" filterUnits="userSpaceOnUse"><feDropShadow dx="0" dy="15" stdDeviation="13" flood-color="#555b47" flood-opacity=".12"/></filter>
+          </defs>
+          <circle cx="285" cy="269" r="205" fill="#edefe4"/>
+          <circle cx="285" cy="269" r="171" stroke="#dce0d1" stroke-dasharray="3 8"/>
+          <path d="M20 294h25m-12-12v25M503 222h23m-12-11v23" stroke="#9aab8b" stroke-width="1.5"/>
+          <circle cx="129" cy="88" r="5" fill="#b34724"/>
+          <circle cx="472" cy="432" r="4" fill="#8c9c79"/>
+          <path d="m63 184 136-43 145 36 140-42-18 252-143 43-145-36-139 42z" fill="#798267" opacity=".09"/>
+          <g filter="url(#paper-shadow)">
+            <path d="m54 173 145-43 145 36 145-43-23 253-143 43-145-36-145 43z" fill="#e3e7d8"/>
+            <g clip-path="url(#map-shape)">
+              <path d="m54 173 145-43-21 253-145 43z" fill="#eef0e3"/>
+              <path d="m199 130 145 36-21 253-145-36z" fill="#dce2cd"/>
+              <path d="m344 166 145-43-23 253-143 43z" fill="#e8ecdd"/>
+              <path d="M95 154c-19 57 15 70 32 100s-19 47-5 76 23 59-3 92M393 130c10 44-17 64-11 100s46 45 32 85-14 48 2 97" stroke="#becdb1" stroke-width="39"/>
+              <path d="M10 296c96-32 119 41 193 6s79-43 133-23 82 38 174-14" stroke="#f7f7ef" stroke-width="15"/>
+              <path d="M74 130 44 455m138-333-24 300m189-295-26 326m159-345-25 311" stroke="#cad1bc" stroke-width="1"/>
+              <path d="M1 205 520 320M0 362 516 204" stroke="#c9d2bb" stroke-width="1.5"/>
+              <path d="M0 100h560v380H0z" fill="url(#grid)" opacity=".27"/>
+              <path d="M126 306c25 4 48-28 67-33 41-10 40 67 85 59 35-6 23-65 56-77 25-9 33 4 55-20" stroke="#faf8ee" stroke-width="9" stroke-linecap="round"/>
+              <path d="M126 306c25 4 48-28 67-33 41-10 40 67 85 59 35-6 23-65 56-77 25-9 33 4 55-20" stroke="#b34724" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 8"/>
+            </g>
+            <path d="m199 130-21 253m166-217-21 253" stroke="#b8c1a6" stroke-width="1.5"/>
+            <path d="m54 173 145-43 145 36 145-43-23 253-143 43-145-36-145 43z" stroke="#c2cab1" stroke-width="1.5" stroke-linejoin="round"/>
+          </g>
+          <ellipse cx="126" cy="306" rx="23" ry="9" fill="#8c5239" opacity=".14"/>
+          <path d="M126 305s-30-34-30-55a30 30 0 1 1 60 0c0 21-30 55-30 55Z" fill="#b34724" stroke="#f6f4ec" stroke-width="4"/>
+          <circle cx="126" cy="249" r="10" fill="#f6f4ec"/>
+          <path d="m100 205-6-11m36 3 1-13m27 22 9-9" stroke="#b34724" stroke-width="2" stroke-linecap="round"/>
+          <g transform="translate(367 192)">
+            <circle cx="23" cy="26" r="31" fill="#f6f4ec"/>
+            <path d="M7 24 23 10l16 14M12 22v22h22V22" stroke="#3d513c" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M20 44V31h7v13" fill="#a9bd97" stroke="#3d513c" stroke-width="2"/>
+          </g>
+          <g transform="rotate(-7 245 390)">
+            <rect x="210" y="372" width="130" height="36" rx="3" fill="#f6f4ec" stroke="#ccd2c0"/>
+            <text x="275" y="395" font-family="'Courier New', monospace" font-size="11" text-anchor="middle" letter-spacing="1.5" fill="#525f48">YOU ARE HERE?</text>
+          </g>
+          <g class="compass">
+            <circle cx="455" cy="84" r="39" fill="#f6f4ec" stroke="#c9cebd"/>
+            <circle cx="455" cy="84" r="31" stroke="#d6dacb"/>
+            <path d="m455 60 9 24-9 24-9-24z" fill="#d0d8c1"/>
+            <path d="m455 60 9 24-9-4-9 4z" fill="#b34724"/>
+            <circle cx="455" cy="84" r="3" fill="#252b23"/>
+            <text x="455" y="38" font-family="'Courier New', monospace" font-size="10" text-anchor="middle" fill="#62675c">N</text>
+          </g>
+          <path d="m164 443 8 8m-8 0 8-8" stroke="#a2b18e" stroke-width="1.5"/>
+        </svg>
+        <figcaption class="coordinates">DESTINATION UNKNOWN &middot; HOME IS ONE CLICK AWAY</figcaption>
+      </figure>
+    </main>
+    <footer>
+      <span>agermain.tech / The scenic route</span>
+      <span class="footer-right"><span class="footer-line" aria-hidden="true"></span>404 &mdash; Not found</span>
+    </footer>
+  </div>
+</body>
+</html>
