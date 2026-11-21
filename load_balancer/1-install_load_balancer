@@ -12,7 +12,7 @@ frontend balancer_http_in
 
 backend balancer_http_out
     balance roundrobin
-    server 7131-web-01 18.130.48.59:80 check
-    server 7131-web-02 18.175.239.63:80 check
+    server 7294-web-02 18.175.239.63:80 check
+    server 7294-lb-01 16.60.187.232:80 check
 CFG
 sudo service haproxy restart
