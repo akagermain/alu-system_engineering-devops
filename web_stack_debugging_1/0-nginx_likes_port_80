@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Enable the default Nginx site on port 80 and restart Nginx.
+ln -sfn /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default &&
+    service nginx restart
