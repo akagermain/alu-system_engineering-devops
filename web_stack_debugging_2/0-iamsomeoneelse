@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Run whoami as the user supplied on the command line.
+
+if [ "$#" -ne 1 ]; then
+    printf 'Usage: %s USERNAME\n' "$0" >&2
+    exit 1
+fi
+
+sudo -u "$1" -- whoami

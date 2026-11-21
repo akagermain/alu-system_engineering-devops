@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Configure Nginx to listen on port 8080 and start it as the nginx user.
+
+set -e
+
+if pgrep -x nginx >/dev/null; then
+    service nginx stop
+fi
+
+sed -i --follow-symlinks -E \
+    -e 's/^([[:space:]]*)listen[[:space:]]+80([[:space:];])/\1listen 8080\2/' \
+    -e 's/^([[:space:]]*)listen[[:space:]]+\[::\]:80([[:space:];])/\1listen [::]:8080\2/' \
+    /etc/nginx/sites-enabled/default
+
+nginx_group=$(id -gn nginx)
+chgrp "$nginx_group" /etc/nginx/nginx.conf
+chmod g+r /etc/nginx/nginx.conf
+install -o nginx -g "$nginx_group" -m 0644 /dev/null /run/nginx.pid
+
+sudo -u nginx -- /usr/sbin/nginx -t
+sudo -u nginx -- /usr/sbin/nginx
