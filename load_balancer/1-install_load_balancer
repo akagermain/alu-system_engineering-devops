@@ -13,6 +13,6 @@ frontend balancer_http_in
 backend balancer_http_out
     balance roundrobin
     server 7294-web-01 18.130.48.59:80 check
-    server 7294-web-02 16.175.239.63:80 check
+    server 7294-web-02 18.175.239.63:80 check
 CFG
 sudo haproxy -c -f /etc/haproxy/haproxy.cfg && sudo service haproxy restart
